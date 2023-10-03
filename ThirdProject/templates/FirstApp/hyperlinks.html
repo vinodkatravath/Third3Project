@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>hyperlink.html web-page</title>
+    <style>
+        h1{
+            color: blue;
+            background-color: lavender;
+            text-align: center;
+            border: 2px solid brown;
+        }
+        h4{
+            color: red;
+            text-align: center;
+            text-align: center;
+            width: 75%;
+            border: 1px solid brown;
+            margin: auto;
+        }
+        #div1 {
+            border: 5px solid red;
+            height: 150px;
+        }
+        #div2{
+            border: 3px solid green;
+            height: 99%;
+        }
+        .indiv{
+            border: 1px solid maroon;
+            height: 135px;
+            width: 24.5%;
+            float: left;
+            margin: 1px;
+            margin-top: 5px;
+        }
+        img{
+            border: 1px dotted blue;
+            width: 90%;
+            height: 126px;
+            margin: 3px;
+            margin-left: 8px;
+        }
+        img:hover{
+            border: 4px solid blue;
+            width: 95%;
+            height: 130%;
+        }
+        p {
+            background-color: yellow;
+            border: 2px Solid red;
+            color: red;
+            display: inline;
+            padding: 3px;
+        }
+        ol {
+            border: 2px Solid blue;
+            width: 150px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h11">{{ msg1 }}</h1>
+    <h4 id="h22">Current Server date & time ::{{ date1 }}</h4>
+    <hr />
+    <div  id="div1">
+        <div id="div2">
+            <div class="indiv">
+                <a href="{% static 'images/images.jpeg' %}" target="_blank">
+                    <img src="{% static 'images/images1.jpeg' %}">
+            </div>
+             <div class="indiv">
+                 <a href="{% static 'images/images.jpeg' %}" target="_blank">
+                    <img src="{% static 'images/images1.jpeg' %}">
+             </div>
+             <div class="indiv">
+                <a href="{% static 'images/images.jpeg' %}" target="_blank">
+                    <img src="{% static 'images/images1.jpeg' %}">
+             </div>
+             <div class="indiv">
+                <a href="{% static 'images/images.jpeg' %}" target="_blank">
+                    <img src="{% static 'images/images1.jpeg' %}">
+             </div>
+        </div>
+    </div>
+    <hr/>
+    <p>Downloadable Files</p>
+    <ol>
+        <li><a href="{% static "other/python-3.11.2-amd64.exe"%}">python sowftware</a></li>
+        <li><a href="{% static "other/npp.8.5.Installer.x64.exe"%}">note pad++</a></li>
+    </ol>
+    <hr/>
+    <audio controls>
+        <source src="{% static 'other/music1.mp3' %}" type="audio/mp3">
+        your browser does not support the video tag.
+    </audio>
+    <hr/>
+    <video width="320" height="240" controls>
+        <source src="{% static "other/me.vid.mp4" %}" type="video/mp4">
+        your browser does not support the video tag.
+    </video>
+    <hr/>
+    <iframe width="1083" height="609" src="https://www.youtube.com/embed/rtUi6E31myQ" title="Feel The Vibes | HT Music | Arijit Singh Songs | Best of Arijit Singh 2023 | Bollywood Love Songs |" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <hr/>
+</body>
+</html>

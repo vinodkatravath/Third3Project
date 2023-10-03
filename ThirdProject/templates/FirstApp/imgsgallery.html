@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %} <!-- folder name-->
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Image-Gallery DJango-App</title>
+ <style>
+     body{
+         background-image: url("{%static 'images/images4.jpg'%}");
+     }
+    body{
+         background-color: lightyellow;
+         }
+         h1{
+         background-color: yellow;
+         text-align: center;
+         color:blue;
+         border:2px Solid Brown;
+         }
+         h4{
+         background-color: lightpink;
+         text-align: center;
+         color:red;
+         width:75%;
+         margin:auto;
+         border:1px Solid Red;
+         }
+         #div1{
+         border: 5px Solid Red;
+         height:300px;
+         }
+         #div2,#div3{
+         border:2px Solid green;
+         height:49%;
+         }
+         .indiv{
+         border:1px Solid Maroon;
+         float:left;
+         width:24.5%;
+         height:135px;
+         margin:1px;
+         }
+         img{
+         border:1px dotted blue;
+         width:90%;
+         height:126px;
+         margin:3px;
+         margin-left:8px;
+         }
+         img:hover{
+         border:4px Solid Blue;
+         width:95%;
+         height:130px;
+         }
+
+    </style>
+    </head>
+    <body>
+         <h1 id=h11>{{msg1}}</h1>
+         <h4 id=h22>Current Server Date & Time :: {{date1}}</h4>
+         <hr />
+         <div id="div1">
+         <div id="div2">
+         <div class="indiv"><img src="{%static 'images/images1.jpeg'%}" alt="images1.jpeg" /></div>
+         <div class="indiv"><img src="{%static 'images/images.jpeg'%}" alt="images2.jpeg" /></div>
+         <div class="indiv"><img src="{%static 'images/images3.jpg'%}" alt="images3.jpg" /></div>
+         <div class="indiv"><img src="{%static 'images/images2.jpg'%}" alt="images2.jpg" /></div>
+         </div>
+         <div id="div3">
+         <div class="indiv"><img src="{%static 'images/images1.jpeg'%}" alt="images1.jpeg" /></div>
+         <div class="indiv"><img src="{%static 'images/images.jpeg'%}" alt="images2.jpeg" /></div>
+         <div class="indiv"><img src="{%static 'images/images3.jpg'%}" alt="images3.jpg" /></div>
+         <div class="indiv"><img src="{%static 'images/images2.jpg'%}" alt="images2.jpg" /></div>
+         </div>
+         </div>
+</body>
+</html>

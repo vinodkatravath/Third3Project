@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <script>
+    const collapseElementList = document.querySelectorAll('.collapse')
+    const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+        </script>
+    <script>
+        <script src="{% static 'js/boostrapbundal.js' %}">
+    </script>
+    <meta charset="UTF-8">
+    <title>sample.html</title>
+    <link href="{% static 'css/sample.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/boostrap.css' %}" rel="stylesheet" />
+    <script>
+        function f1(){
+            var a =document.getElementById ('num1').value;
+            var b =document.getElementById ('num1').value;
+            sum=parseInt (a)+parseInt(b);
+            window.alert (a+b)
+            document.getElementById ('sp1').textContet=sum;
+        }
+        </script>
+        p{
+            color: red;
+        }
+        #p1{
+            text-align: center;
+            background-color:aqua;
+        }
+        .pc1{
+            text-align: center;
+            background-color:aquamarine;
+            font-size:20px ;
+            font-width: bolder;
+            text-align: right;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style=color:blue;text-align:center;background-color:yellow;>sample.html web-page for ui-tech</h1>
+    <hr  style="border-color:red">
+    <div id="div1">
+        <p id="p1">this is para1</p>
+        <p class="pc1">this is para2</p>
+        <p class="pc1">this is para3</p>
+    </div>
+    <hr id="hr2"/>
+    <h3>Javascript in webpage</h3>
+    <hr width="80%" color="red"/>
+    <script>
+        var a=11
+        var b=3
+        document.write('<h4>')
+        document.write('A ='+a+'<br />')
+        document.write('B ='+b+'<br />')
+        document.write('A+B ='+a+b+'<br />')
+        document.write('</h4>')
+    </script>
+    <h4>
+    <form>
+        <lable>Enter a value:</lable><input type="number" id="num1">
+        <br/><br/>
+        <lable>Enter b value:</lable><input type="numbr" id="num2">
+        <br/><br/>
+        <input type="button" value="sum" onclick="f1()"/>
+        <br/><br/>
+        result :: <span id="sp1"></span>
+    </form>
+
+    </h4>
+    <hr/>
+    <h3>boostrap-css/js</h3>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark btn-lg">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      pyhton
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      django frame work
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+</body>
+</html>
